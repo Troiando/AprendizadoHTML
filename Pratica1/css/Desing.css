@@ -1,0 +1,24 @@
+.fundoTest{
+    
+    position: absolute;
+    width: 1900px;
+    height: 1080px;
+    background: #dbdbdb;
+}
+.text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /*cor apenas para exmplo*/
+    color: rgb(0, 0, 0);
+ }
+ #spaceText {
+    padding-right: 16px;
+}
+
+#photo {
+    width: 1600px;
+    height: 949px;
+}
+
