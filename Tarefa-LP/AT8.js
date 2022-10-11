@@ -13,4 +13,4 @@ let e = array.reduce((e,sum)=>{
 
 },)
 console.log(array);
-console.log(e);
+console.log("Soma "+e);
