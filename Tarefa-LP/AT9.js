@@ -1,8 +1,14 @@
-let nome=["Q","U","E","C","A","S",'A','B','O','N','I','T','A']
-let e = nome.reduce((e,sum)=>{
-    return e+=sum;
+let frase="Olhei para frent"
+let e = list(frase)
+let lim = e.length
+let i = 0
 
-},)
-
+while (i < lim) {
+    if (e[i] === " ") {
+        delete f[i]
+        lim -=1
+    }
+    i+=1
+}
 console.log(e)
 
