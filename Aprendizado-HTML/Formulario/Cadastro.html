@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
 </head>
+
 <body>
 
     <a href="/Aprendizado-HTML/Formulario/index.html">Login</a><br>
 
-    <h2>Cadastro</h2>
+    <form action="">
+        <h2>Cadastro</h2>
 
-    Nome: <br>
-    <input type="text" name="nome"><br><br>
 
-    Sexo: <br>
-    <input type="radio" name="sexo" value="M"> Masculino <br>
-    <input type="radio" name="sexo" value="F"> Femenino <br>
+
+        Nome: <br>
+        <input type="text" name="nome"><br><br>
+
+        Sexo: <br>
+        <input type="radio" name="sexo" value="M"> Masculino <br>
+        <input type="radio" name="sexo" value="F"> Femenino <br><br>
+
+        <h2>Analise</h2>
+
+        <ol>
+            <li>
+                Sofre de alguma doença?
+                <input type="checkbox">sim
+                <input type="checkbox">Não
+            </li>
+        </ol>
+        Qual(is): <br>
+        <textarea name="" id="" cols="40" rows="1"></textarea>
+
+        <h2>Tratamento</h2>
+        <select name="tratamento">
+            <option>Limpeza</option>
+            <option>Fluor</option>
+            <option>Remoção</option>
+        </select><br><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+
+
+
 
 </body>
+
 </html>
