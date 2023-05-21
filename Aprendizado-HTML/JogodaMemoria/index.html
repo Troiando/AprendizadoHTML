@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo da Memória</title>
+  <style>
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+      margin: 5px;
+      display: inline-block;
+      cursor: pointer;
+      background-size: cover;
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>Jogo da Memória</h1>
+  <button onclick="iniciarJogo()">Iniciar Jogo</button>
+  <div id="tabuleiro"></div>
+
+  <script>
+    var imagens = [
+      "imagem1.jpg",
+      "imagem2.jpg",
+      "imagem3.jpg",
+      "imagem4.jpg",
+      "imagem5.jpg",
+      "imagem6.jpg",
+      "imagem7.jpg",
+      "imagem8.jpg",
+      "imagem9.jpg",
+      "imagem10.jpg",
+      // Adicione aqui os caminhos das outras imagens
+    ];
+
+    var cartas = [];
+    var cartaVirada = null;
+    var cartasEncontradas = 0;
+    var bloqueio = true;
+
+    function iniciarJogo() {
+      // Embaralha as imagens
+      cartas = imagens.concat(imagens);
+      cartas.sort(function() {
+        return 0.5 - Math.random();
+      });
+
+      // Cria as cartas no tabuleiro
+      var tabuleiro = document.getElementById("tabuleiro");
+      tabuleiro.innerHTML = "";
+      for (var i = 0; i < cartas.length; i++) {
+        var carta = document.createElement("div");
+        carta.className = "card";
+        carta.style.backgroundImage = "url('" + cartas[i] + "')";
+        carta.setAttribute("data-index", i);
+        carta.addEventListener("click", virarCarta);
+        tabuleiro.appendChild(carta);
+      }
+
+      bloqueio = true;
+      setTimeout(function() {
+        var cartasTabuleiro = document.getElementsByClassName("card");
+        for (var i = 0; i < cartasTabuleiro.length; i++) {
+          cartasTabuleiro[i].style.backgroundImage = "none";
+        }
+        bloqueio = false;
+      }, 2000);
+    }
+
+    function virarCarta() {
+      if (bloqueio || this === cartaVirada) return;
+
+      var carta = this;
+      var index = carta.getAttribute("data-index");
+      carta.style.backgroundImage = "url('" + cartas[index] + "')";
+
+      if (cartaVirada === null) {
+        cartaVirada = carta;
+      } else {
+        if (cartas[index] === cartas[cartaVirada.getAttribute("data-index")]) {
+          cartaVirada.removeEventListener("click", virarCarta);
+          carta.removeEventListener("click", virarCarta);
+          cartaVirada = null;
+          cartasEncontradas += 2;
+
+          if (cartasEncontradas === cartas.length) {
+            alert("Parabéns, você encontrou todos os pares!");
+          }
+        } else {
+          bloqueio = true;
+          setTimeout(function() {
+            cartaVirada.style.backgroundImage = "none";
+            carta.style.backgroundImage = "none";
+            cartaVirada = null;
+            bloqueio = false;
+          }, 1000);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
