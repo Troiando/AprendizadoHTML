@@ -6,3 +6,7 @@ function calcularIdade() {
     var idade = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
     document.getElementById("idade").textContent = idade + " anos";
 }
+
+function selectCavity(element) {
+    element.classList.toggle("selected");
+  }
