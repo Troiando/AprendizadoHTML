@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,47 +9,122 @@
     <script src="script.js"></script>
     <title>Document</title>
 </head>
+
 <body>
 
     <header>
         <div class="boxheader">
             <h1>IFES</h1>
-            
-         </div>
+
+        </div>
     </header>
-   
-    
-   
-    
-   <section>
-    <div class="boxsection">
-    <form action="formulario">
-        <h2>Formulario de indentificação</h2>
 
-       
-            
-                <tituloDoc> Nome completo: </tituloDoc><br>
 
-                <input type="text" size="80px" name="nome"><br><br>
+
+
+    <section>
+        <div class="boxsection">
+            <form action="formulario">
+                <h2>Formulario de indentificação</h2>
+
+                <div class="fontTituloMedio">
+                    Nome completo:
+                    <input type="text" size="80px" name="nome"><br><br>
                     <label for="dataNascimento">Data de Nascimento:</label>
-                <input type="date" id="dataNascimento" onchange="calcularIdade()">
-                <div id="idade"></div><br>
-
-                
-                Série:
-                <input type="text" name="serie"> 
-                
-                
-                Telefone:
-                <input type="text" size="20px" name="telefone">
-              
-               
-                
-    </form>
-</div>
-</section>
-
-
+                    <input type="date" size="20px" id="dataNascimento" onchange="calcularIdade()">
+                    <div id="idade"></div><br>
     
+                    Série:
+                    <input type="text" name="serie">
+    
+                    Telefone:
+                    <input type="text" size="20px" name="telefone"><br><br>
+                </div>
+               
+
+                <h2>Anamnese</h2>
+
+                <ol>
+                    <li>
+                        <textDoc>Sofre de alguma doença?</textDoc>
+                        <input type="checkbox">Sim
+                        <input type="checkbox">Não
+                        <br>
+                        Qual(is): 
+                        <input type="text" size="46px" name="qual">
+                    </li>
+                    <br>
+                    <li>
+                        Está em tratamento médico?
+                        <input type="checkbox">Sim
+                        <input type="checkbox">Não
+                    </li>
+                    <br>
+                    <li>
+                        Gravidez?
+                        <input type="checkbox">Sim
+                        <input type="checkbox">Não
+                        <br>
+                    </li>
+                    <br>
+                    <li>
+                        Está fazendo uso de alguma medicação?
+                        <input type="checkbox">Sim
+                        <input type="checkbox">Não
+                        <br>
+                        Qual(is): 
+                        <input type="text" size="46px" name="qual">
+                    </li>
+                    <br>
+                    <li>
+                        Já teve problemas com cicatrização?
+                        <input type="checkbox">Sim
+                        <input type="checkbox">Não
+                        <br>
+                    </li>
+                
+                </ol>
+                
+                
+              
+        
+                <h2>Tratamento</h2>
+                <select name="tratamento">
+                    <option>Limpeza</option>
+                    <option>Fluor</option>
+                    <option>Remoção</option>
+                </select><br><br>
+
+            </form>
+        </div>
+    </section>
+
+    <div class="boxfooter">
+
+
+        <h1>Odontograma</h1>
+
+        <div class="tooth">
+            <div class="cavity" style="top: 10px; left: 30px;" onclick="selectCavity(this)"></div>
+            <div class="cavity" style="top: 30px; left: 10px;" onclick="selectCavity(this)"></div>
+            <div class="cavity" style="top: 30px; left: 50px;" onclick="selectCavity(this)"></div>
+            <div class="cavity" style="top: 50px; left: 30px;" onclick="selectCavity(this)"></div>
+            <div class="cavity" style="top: 30px; left: 30px;" onclick="selectCavity(this)"></div>
+          </div>
+        
+          <div class="tooth">
+            <div class="cavity" style="top: 10px; left: 30px;" onclick="selectCavity(this)"></div>
+            <div class="cavity" style="top: 30px; left: 10px;" onclick="selectCavity(this)"></div>
+            <div class="cavity" style="top: 30px; left: 50px;" onclick="selectCavity(this)"></div>
+            <div class="cavity" style="top: 50px; left: 30px;" onclick="selectCavity(this)"></div>
+            <div class="cavity" style="top: 30px; left: 30px;" onclick="selectCavity(this)"></div>
+          </div>
+
+
+
+    </div>
+
+
 </body>
+
 </html>
