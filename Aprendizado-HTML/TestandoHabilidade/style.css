@@ -1,0 +1,32 @@
+.tituloDoc{
+    block-size: 1;
+    font-weight: bold;
+    box-shadow: 1px;
+    border-color: brown;
+
+}
+
+.boxheader{
+    display: block;
+    position:absolute;
+    height: 100px;
+    bottom:0;
+    top:0%;
+    left:0;
+    right:0;
+    background-color: rgb(29, 178, 138);
+
+}
+
+.boxsection{
+		display:inline-table;
+		position:absolute;
+        margin-left: 20px;
+		height: 20%;
+		bottom: 0;
+		top:30%;
+		left:0;
+		right:0;
+		background-color: rgb(196, 152, 19);
+}
+
